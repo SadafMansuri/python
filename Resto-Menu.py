@@ -1,4 +1,4 @@
-# Define the Menu of Restaurant.
+# #Define the Menu of Restaurant.
 menu={
     'Pizza':199,
     'Pasta':170,
@@ -33,4 +33,5 @@ if another_order=='Yes':
     else:
         print(f'Ordered Item {item_2} is not available!')
 print(f'The Total amount of item is {order_total}  ')
+
 
