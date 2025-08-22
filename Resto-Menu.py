@@ -1,39 +1,40 @@
-# #Define the Menu of Restaurant.
-menu={
-    'Pizza':199,
-    'Pasta':170,
-    'Burger':99,
-    'Noodles':180,
-    'Salad':80,
-    'Cold Coffee':120,
-    'Hot Coffee':70,
-    'Orange Juice':50,
-    }
+# Restaurant Menu Project
 
-#Greet
-print('Welcome to PYTHON Restaurant')
-print('Here is our Menu')
-print( 'Pizza: Rs199\nPasta: Rs170\nBurger: Rs99\nNoodles: Rs180\nSalad: Rs80\nCold Coffee: Rs120\nHot Coffee: Rs70\nOrange Juice: Rs50')
-order_total=0
-#99+80=179
+menu = {
+    'Pizza': 199,
+    'Pasta': 170,
+    'Burger': 99,
+    'Noodles': 180,
+    'Salad': 80,
+    'Cold Coffee': 120,
+    'Hot Coffee': 70,
+    'Orange Juice': 50,
+}
 
-item_1=input('Enter the name of item you want to order=')
-if item_1 in menu:
-    order_total +=menu[item_1]
-    print(f'Your item {item_1} has been added to your order')
+def show_menu():
+    print("\nHere is our delicious menu:\n")
+    for item, price in menu.items():
+        print(f"{item}: Rs{price}")
 
-else:
-    print(f'ordered item {item_1} is not available yet!')
-
-another_order=input('Do You want to add another item?  (Yes/No)')
-if another_order=='Yes':
-    item_2=input('Enter the name of Second item=')
-    if item_2 in menu:
-        order_total +=menu[item_2]
-        print(f'Item {item_2} has been added to order')
+def take_order():
+    '"Take customer order and return the total'''
+    total = 0
+    item = input("\nEnter the name of item you want to order: ")
+    if item in menu:
+        total += menu[item]
+        print(f" {item} has been added to your order.")
     else:
-        print(f'Ordered Item {item_2} is not available!')
-print(f'The Total amount of item is {order_total}  ')
+        print(f" Sorry, {item} is not available!")
+    return total
 
+# Main program
+print(" Welcome to PYTHON Restaurant ")
+show_menu()
 
+order_total = take_order()
 
+another_order = input("\nDo you want to add another item? (Yes/No): ")
+if another_order.lower() == "yes":
+    order_total += take_order()
+
+print(f"\n The total amount of your order is Rs{order_total}.")
