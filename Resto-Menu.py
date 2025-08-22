@@ -38,3 +38,5 @@ if another_order.lower() == "yes":
     order_total += take_order()
 
 print(f"\n The total amount of your order is Rs{order_total}.")
+print('Thanks For Visiting PYTHON Restaurant! Please Come again!')
+
