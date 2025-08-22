@@ -12,6 +12,7 @@ menu={
 
 #Greet
 print('Welcome to PYTHON Restaurant')
+print('Here is our Menu')
 print( 'Pizza: Rs199\nPasta: Rs170\nBurger: Rs99\nNoodles: Rs180\nSalad: Rs80\nCold Coffee: Rs120\nHot Coffee: Rs70\nOrange Juice: Rs50')
 order_total=0
 #99+80=179
@@ -33,5 +34,6 @@ if another_order=='Yes':
     else:
         print(f'Ordered Item {item_2} is not available!')
 print(f'The Total amount of item is {order_total}  ')
+
 
 
